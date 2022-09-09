@@ -1,0 +1,24 @@
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace CriptoADS2022.Models
+{
+    [Table("Conta")]
+    public class Conta
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Display(Name = "ID: ")]
+        public int id { get; set; }
+
+        [Display(Name = "Cliente: ")]
+        public Cliente cliente { get; set; }
+
+        [Display(Name = "Moeda: ")]
+        public Moeda moeda { get; set; }
+
+        [Display(Name = "Quantidade")]
+        [DisplayFormat(DataFormatString = "{0:N2}")]
+        public float quantidade { get; set; }
+    }
+}
