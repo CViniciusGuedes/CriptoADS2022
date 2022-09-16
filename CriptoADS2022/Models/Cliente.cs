@@ -30,5 +30,8 @@ namespace CriptoADS2022.Models
         [Display(Name ="Idade: ")]
         [Range(18, 100, ErrorMessage = "Idade entre 18...100")]
         public int idade { get; set; }
+
+        public ICollection <Conta> contas { get; set; }
+
     }
 }

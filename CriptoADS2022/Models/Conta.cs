@@ -20,5 +20,7 @@ namespace CriptoADS2022.Models
         [Display(Name = "Quantidade")]
         [DisplayFormat(DataFormatString = "{0:N2}")]
         public float quantidade { get; set; }
+
+        public ICollection<Transacao> transacoes { get; set; }
     }
 }

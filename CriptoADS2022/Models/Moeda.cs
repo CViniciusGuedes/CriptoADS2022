@@ -23,5 +23,9 @@ namespace CriptoADS2022.Models
         [Display(Name = "Venda")]
         [DisplayFormat(DataFormatString = "{0:C2}")]
         public int venda { get; set; }
+
+        public ICollection<Moeda> moedas { get; set; }
+
+
     }
 }
